@@ -1,0 +1,52 @@
+/**
+ * Story Element
+ */
+.pix-story {
+    .story-img {
+        display: inline-block;
+        padding: 5px;
+        border-radius: 100%;
+        overflow: hidden;
+        &:not(.pix-bg-custom) {
+            background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) fixed !important;
+            background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) fixed !important;
+        }
+        &.pix-no-bg {
+            padding: 0px;
+        }
+        position: relative;
+        img {
+            border: 5px solid #fff;
+            -webkit-transition: $transition-base;
+            transition: $transition-base;
+            position: relative;
+            height: auto;
+            -o-object-fit: cover;
+               object-fit: cover;
+            &.hover-effect {
+                opacity: 1;
+            }
+            &.hover-effect-inverse{
+                opacity: 0.85;
+            }
+            &.hover-effect-gray {
+                -webkit-filter: grayscale(1);
+                        filter: grayscale(1);
+            }
+            &.no-border {
+                border: 0px;
+            }
+        }
+        &:hover {
+            img {
+                &.hover-effect {
+                    opacity: 0.85;
+                }
+                &.hover-effect-inverse{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}

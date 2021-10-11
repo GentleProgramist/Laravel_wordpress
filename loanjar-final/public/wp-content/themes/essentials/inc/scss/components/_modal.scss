@@ -1,0 +1,26 @@
+// .modal {
+//     z-index: 99999999999 !important;
+// }
+//
+// // Shell div to position the modal with bottom padding
+// .modal-dialog {
+//   // margin: $modal-dialog-margin;
+// z-index: 999999999999 !important;
+//   // When fading in the modal, animate it to slide down
+//   .modal.fade & {
+//     @include transition($modal-transition);
+//     transform: $modal-fade-transform;
+//   }
+//   .modal.show & {
+//     transform: $modal-show-transform;
+//   }
+// }
+//
+// // Modal background
+// .modal-backdrop {
+//     z-index: 99999999 !important;
+//   background-color: $modal-backdrop-bg;
+//   // Fade for backdrop
+//   &.fade { opacity: 0; }
+//   &.show { opacity: $modal-backdrop-opacity; }
+// }

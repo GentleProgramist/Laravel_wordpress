@@ -1,0 +1,30 @@
+{
+	"name": "papersky/pingyo",
+	"type": "library",
+	"description": "",
+	"keywords": ["pingyo"],
+	"homepage": "https://github.com/papersky/pingyo",
+	"license" : "BSD",
+	"authors" : [
+		{
+			"name": "Stevan Goode",
+			"email": "stevan@papersky.com",
+			"homepage": "http://github.com/papersky/"
+		}
+	],
+	"require": {
+		"php": ">=5.3.2",
+		"vlucas/valitron": "1.2.2",
+        "giggsey/libphonenumber-for-php": "~6.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "@stable",
+		"monolog/monolog": "1.10.0"
+	},
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"PingYo\\": "src/"
+		}
+	}
+}

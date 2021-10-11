@@ -1,0 +1,95 @@
+.pix-video {
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    .video-bg {
+        position: absolute;
+        max-width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        -webkit-transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .video-play-btn {
+        position: absolute;
+        z-index: 2;
+        margin: 0 auto;
+        cursor: pointer;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+        -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        i {
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: $font-weight-bold;
+        }
+    }
+    iframe, video {
+        opacity: 0;
+    }
+
+    &.video-active {
+        background: #000;
+        .video-bg {
+            opacity: 0;
+            background: #000;
+        }
+        .video-play-btn {
+            opacity: 0;
+            pointer-events: none;
+        }
+        iframe, video {
+            opacity: 1;
+        }
+    }
+    &.video-start {
+        .video-bg, .video-play-btn {
+            display:none;
+        }
+    }
+}
+.pix-video-section {
+    position: relative;
+}
+.pix-video-cover {
+    position: absolute;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    top: 0;
+    display: inline-block;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .jarallax {
+        position: absolute;
+        max-width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        top: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.pix-vertical-middle {
+    vertical-align: middle;
+}

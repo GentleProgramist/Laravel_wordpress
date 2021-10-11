@@ -1,0 +1,48 @@
+/*
+Theme Name: essentials
+
+WooCommerce styles override
+*/
+
+/**
+ * WooCommerce color variables
+ */
+$woocommerce__color-error: #FF003F;
+$woocommerce__color-success: #4ED199;
+$woocommerce__color-info: #0dd3ff;
+
+/**
+ * Imports
+ */
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/**
+ * Shop tables
+ */
+@import "shop/tables";
+
+/**
+ * Products
+ */
+@import "shop/products";
+
+/**
+ * Single product
+ */
+@import "shop/single-product";
+
+/**
+ * Checkout
+ */
+@import "shop/checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "shop/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "shop/widgets";

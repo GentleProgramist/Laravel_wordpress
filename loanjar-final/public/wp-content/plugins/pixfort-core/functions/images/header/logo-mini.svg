@@ -1,0 +1,13 @@
+
+<svg width="15px" height="17px" viewBox="0 0 15 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <title>Shape</title>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-builder" transform="translate(-227.000000, -501.000000)" fill="#0072FF" fill-rule="nonzero">
+            <g id="search" transform="translate(197.000000, 459.000000)">
+                <path d="M32,56 L35,56 L35,59 L32,59 L32,56 Z M32,52 L35,52 L35,55 L32,55 L32,52 Z M36,52 L39,52 L39,55 L36,55 L36,52 Z M32,48 L35,48 L35,51 L32,51 L32,48 Z M36,48 L39,48 L39,51 L36,51 L36,48 Z M40,48 L43,48 L43,51 L40,51 L40,48 Z M30,42 L33.2142857,42 L33.2142857,44.0027043 L35.8928571,44.0027043 L35.8928571,42 L39.1071429,42 L39.1071429,44.0027043 L41.7857143,44.0027043 L41.7857143,42 L45,42 L45,45.5051082 L43.3928571,47 L31.6071429,47 L30,45.505609 L30,42 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

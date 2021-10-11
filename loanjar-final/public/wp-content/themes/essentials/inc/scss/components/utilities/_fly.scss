@@ -1,0 +1,29 @@
+.fly-sm {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include fly-sm();
+    * {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+}
+
+.fly {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include fly();
+    * {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+}
+
+.fly-lg {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include fly-lg();
+    * {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+}

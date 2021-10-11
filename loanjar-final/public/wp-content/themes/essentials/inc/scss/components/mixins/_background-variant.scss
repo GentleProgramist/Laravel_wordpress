@@ -1,0 +1,42 @@
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover {
+      background-color: darken($color, 10%) !important;
+    }
+  }
+  svg path#{$parent},
+  svg polygon#{$parent},
+  svg ellipse#{$parent}, {
+      fill: $color !important;
+  }
+}
+
+@mixin bg-gradient-variant($parent, $color) {
+  #{$parent} {
+    background: $color -webkit-gradient(linear, left top, left bottom, from(mix($body-bg, $color, 15%)), to($color)) repeat-x !important;
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
+  }
+}
+
+@mixin bg-transparent-variant($parent, $color, $opacity) {
+  #{$parent} {
+    background-color: rgba($color, $opacity) !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover {
+      background-color: darken(rgba($color, $opacity), 20%) !important;
+    }
+  }
+  svg path#{$parent},
+  svg ellipse#{$parent},
+  svg polygon#{$parent} {
+      fill: rgba($color, $opacity) !important;
+  }
+}

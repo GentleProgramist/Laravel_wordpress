@@ -1,0 +1,39 @@
+/* Chart box */
+.chart_box {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    .chart {
+        width: 140px; margin: 0 auto 10px; position: relative;
+        display: -webkit-box;
+        display: flex;
+          -webkit-box-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+                  justify-content: center;
+          text-align: center;
+        .icon, .image {
+            width: 70px;
+            height: 70px;
+            line-height: 70px; overflow: hidden; position: absolute; left: 35px; top: 35px; z-index: 3; text-align: center;
+        }
+        .icon { font-size: 45px; }
+        .icon i:before { margin: 0; }
+        .image img { vertical-align: middle; }
+        .num { position: absolute;z-index: 3; width: 100%; }
+    }
+
+    .chart_title { margin-bottom: 8px; }
+
+}
+
+.pix-progress {
+    .progress {
+        height: 10px;
+        border-radius: 5px;
+    }
+    .progress-bar {
+        border-radius: 5px;
+    }
+}

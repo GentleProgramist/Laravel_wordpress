@@ -1,0 +1,51 @@
+// Gradients
+
+@mixin gradient-bg($color) {
+  @if $enable-gradients {
+    background: $color -webkit-gradient(linear, left top, left bottom, from(mix($body-bg, $color, 15%)), to($color)) repeat-x;
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+  } @else {
+    background-color: $color;
+  }
+}
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-x($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop($start-percent, $start-color), color-stop($end-percent, $end-color));
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+  background-repeat: repeat-x;
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-y($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop($start-percent, $start-color), color-stop($end-percent, $end-color));
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+  background-repeat: repeat-x;
+}
+
+@mixin gradient-directional($start-color: $gray-700, $end-color: $gray-800, $deg: 45deg) {
+  background-image: linear-gradient($deg, $start-color, $end-color);
+  background-repeat: repeat-x;
+}
+@mixin gradient-x-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: -webkit-gradient(linear, left top, right top, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+}
+@mixin gradient-y-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+}
+@mixin gradient-radial($inner-color: $gray-700, $outer-color: $gray-800) {
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
+@mixin gradient-striped($color: rgba($white, .15), $angle: 45deg) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from($angle), color-stop(25%, $color), color-stop(25%, transparent), color-stop(50%, transparent), color-stop(50%, $color), color-stop(75%, $color), color-stop(75%, transparent), to(transparent));
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}

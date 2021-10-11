@@ -1,0 +1,93 @@
+@if index($hamburger-types, stand) {
+  /*
+   * Stand
+   */
+  .hamburger--stand {
+    .hamburger-inner {
+      -webkit-transition: background-color 0s 0.075s linear,
+                  -webkit-transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: background-color 0s 0.075s linear,
+                  -webkit-transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                  background-color 0s 0.075s linear;
+      transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                  background-color 0s 0.075s linear,
+                  -webkit-transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+      &::before {
+        -webkit-transition: top 0.075s 0.075s ease-in,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: top 0.075s 0.075s ease-in,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: top 0.075s 0.075s ease-in,
+                    transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: top 0.075s 0.075s ease-in,
+                    transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                    -webkit-transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+
+      &::after {
+        -webkit-transition: bottom 0.075s 0.075s ease-in,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: bottom 0.075s 0.075s ease-in,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: bottom 0.075s 0.075s ease-in,
+                    transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: bottom 0.075s 0.075s ease-in,
+                    transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                    -webkit-transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+    }
+
+    &.is-active {
+      .hamburger-inner {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+        background-color: transparent !important;
+
+        -webkit-transition: background-color 0s 0.15s linear,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        transition: background-color 0s 0.15s linear,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+                    background-color 0s 0.15s linear;
+
+        transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+                    background-color 0s 0.15s linear,
+                    -webkit-transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &::before {
+          top: 0;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          -webkit-transition: top 0.075s 0.1s ease-out,
+                      -webkit-transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: top 0.075s 0.1s ease-out,
+                      -webkit-transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: top 0.075s 0.1s ease-out,
+                      transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: top 0.075s 0.1s ease-out,
+                      transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
+                      -webkit-transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        &::after {
+          bottom: 0;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          -webkit-transition: bottom 0.075s 0.1s ease-out,
+                      -webkit-transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: bottom 0.075s 0.1s ease-out,
+                      -webkit-transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: bottom 0.075s 0.1s ease-out,
+                      transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: bottom 0.075s 0.1s ease-out,
+                      transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1),
+                      -webkit-transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+      }
+    }
+  }
+}

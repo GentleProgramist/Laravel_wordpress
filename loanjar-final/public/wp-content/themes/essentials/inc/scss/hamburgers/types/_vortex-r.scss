@@ -1,0 +1,61 @@
+@if index($hamburger-types, vortex-r) {
+  /*
+   * Vortex Reverse
+   */
+  .hamburger--vortex-r {
+    .hamburger-inner {
+      -webkit-transition-duration: 0.2s;
+              transition-duration: 0.2s;
+      -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+              transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+      &::before,
+      &::after {
+        -webkit-transition-duration: 0s;
+                transition-duration: 0s;
+        -webkit-transition-delay: 0.1s;
+                transition-delay: 0.1s;
+        -webkit-transition-timing-function: linear;
+                transition-timing-function: linear;
+      }
+
+      &::before {
+        -webkit-transition-property: top, opacity;
+        transition-property: top, opacity;
+      }
+
+      &::after {
+        -webkit-transition-property: bottom, -webkit-transform;
+        transition-property: bottom, -webkit-transform;
+        transition-property: bottom, transform;
+        transition-property: bottom, transform, -webkit-transform;
+      }
+    }
+
+    &.is-active {
+      .hamburger-inner {
+        -webkit-transform: rotate(-765deg);
+                transform: rotate(-765deg);
+        -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+                transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+        &::before,
+        &::after {
+          -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+        }
+
+        &::before {
+          top: 0;
+          opacity: 0;
+        }
+
+        &::after {
+          bottom: 0;
+          -webkit-transform: rotate(-90deg);
+                  transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}

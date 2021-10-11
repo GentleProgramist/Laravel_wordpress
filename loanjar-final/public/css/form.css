@@ -1,0 +1,218 @@
+#form-container {
+	margin-top: 50px;
+	font-size: 16px;
+	font-family: Lato, sans-serif;
+}
+
+#form-container label {
+	font-weight: normal;
+}
+
+#form-container .form-control {
+	font-size: 16px;
+	border-radius: 0;
+	height: 50px;
+}
+
+#form-container .section-header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#form-container .btn {
+	padding: 6px 12px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 38px;
+	border-radius: 0;
+}
+
+#form-container .btn-group {
+		width: 100%;
+	}
+	#form-container .btn-group .btn {
+		margin: 2px;
+    font-size: 14px;
+    width: 48%;
+    color: #333;
+    padding: 6px 35px;
+    box-shadow: none;
+        outline: none;
+	}
+	#form-container .btn.wrap {
+		line-height: 18px;
+	}
+	@media (min-width: 991px) {
+		.md-text-right {
+			text-align: right;
+		}
+	}
+	body {
+		background-color: #fff;
+	}
+	label.btn.btn-default.active::before {
+	    content: '✓';
+	    position: absolute;
+	        left: 15px;
+	        font-size: 18px;
+	        color: green;
+	  }
+	label.btn.btn-default.wrap.active::before {
+		line-height: 35px;
+	}
+	.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover, .btn-default:hover {
+		background: #f2f2f2;
+        border-radius: 50%;
+
+    }
+	.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+		border-color: #8c8c8c;
+        border-radius: 50%;
+
+    }
+	.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+		background-color: #f2f2f2;
+        border-radius: 50%;
+
+    }
+	.text-danger {
+	    color: #ff3535;
+	    font-weight: bold;
+	}
+	.form-control {
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		color: #333;
+	}
+	.control-label {
+		color: #666;
+	}
+
+	.help-block {
+		color: #999;
+	}
+	.form-group {
+		margin-bottom: 30px;
+	}
+
+	.panel-default>.panel-heading {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border-radius: 0;
+    border-color: #ddd;
+    margin-bottom: 50px;
+	}
+
+	.form-group.has-success .form-control {
+		color: #3c763d;
+	}
+
+	.form-group.has-error .form-control {
+		color: #ff3535;
+		border-color: #ff3535;
+	}
+
+	.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+		color: #ff3535;
+	}
+
+	/*.form-group.has-error.form-control::before {
+		display: none;
+	}
+
+	.form-group.has-success .form-control::before {
+	  content: '✓';
+    color: #3c763d;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: solid 1px green;
+    text-align: center;
+    border-radius: 50%;
+	}*/
+
+	.form-group.has-error .btn-group .btn.btn-default {
+		border-color: #ff3535;
+	}
+
+	.form-group.has-success .btn-group .btn.btn-default {
+		border-color: #3c763d;
+	}
+
+	#form-container .btn.use-mobile-number {
+		font-size: 14px;
+    line-height: 14px;
+    height: 38px;
+    padding: 4px;
+    position: absolute;
+    right: 21px;
+    top: 6px;
+	}
+
+	.overlay {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 2050;
+		padding-top: 10vh;
+	}
+
+	#progress-screen,
+	#loading-screen {
+		color: deepskyblue;
+	}
+
+	#loading-screen .spinner {
+		font-size: 72px;
+	}
+
+	.error.screen {
+		color: red;
+	}
+
+	#redirecting-screen {
+		color: green;
+	}
+
+	.progress-bar-success {
+		    background: linear-gradient(to right top, #033072, #00f2a5) !important;
+	}
+
+	#progress-indicator {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    width: 100vw;
+	    height: 10px;
+	    z-index: 10000;
+	}
+
+	#progress-indicator .percent {
+	    background-color: #5cb85c;
+	    width: 0%;
+	    height: 100%;
+	}
+
+	.ssn-dash::before {
+		content: '-';
+		position: absolute;
+		left: -3px;
+		line-height: 50px;
+	}
+
+	.alert {
+		margin-bottom: 0;
+		padding: 13px 15px;
+	}
+
+	.form-group .col-md-4:nth-child(3) {
+		height: 50px;
+		overflow: visible;
+	}

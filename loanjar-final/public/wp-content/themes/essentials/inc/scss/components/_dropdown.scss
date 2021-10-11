@@ -1,0 +1,25 @@
+
+.dropdown-menu {
+    border-radius: 5px;
+    border: 0px;
+    @include pix-box-shadow('md', $breadcrumb-border-radius);
+    a:last-child {
+        @include border-bottom-radius(5px);
+    }
+    a:first-child {
+        @include border-top-radius(5px);
+    }
+}
+
+.dropdown-item {
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+}
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.dropdown-item.active, .dropdown-item:active {
+    // background-color: $primary;
+    background-color: rgba(#000, 0.05) !important;
+}

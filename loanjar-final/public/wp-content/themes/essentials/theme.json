@@ -1,0 +1,10 @@
+{
+    "version": 1,
+    "settings": {
+           "blocks": {
+              "core/heading":{
+                "fontSize": "normal"
+              }
+           }
+    }
+}

@@ -1,0 +1,56 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+@each $color, $value in $opacity-values {
+  @include bg-transparent-variant(".bg-dark-#{$color}", darken(desaturate($primary, 85%), 55%), $value);
+  @include bg-transparent-variant(".bg-light-#{$color}", #ffffff, $value);
+  // @include bg-transparent-variant(".bg-primary-#{$color}", $primary, $value);
+  // @include bg-transparent-variant(".bg-success-#{$color}", $success, $value);
+  // @include bg-transparent-variant(".bg-info-#{$color}", $info, $value);
+  // @include bg-transparent-variant(".bg-warning-#{$color}", $warning, $value);
+  // @include bg-transparent-variant(".bg-danger-#{$color}", $danger, $value);
+
+  // @each $c, $v in $theme-colors {
+  //     @include bg-transparent-variant(".bg-#{$c}-#{$color}", $v, $value);
+  // }
+}
+
+@each $c, $v in $theme-colors {
+    // @include bg-variant(".bg-#{$c}-light", lighten($v, 20%));
+    @include bg-transparent-variant(".bg-#{$c}-light", lighten($v, 20%), 0.15);
+}
+.bg-gradient-primary-light {
+    @if $middle-gradient == 'yes' {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop(rgba(lighten($gradient-primary-1, 20%), 0.15)), color-stop(rgba(lighten($gradient-primary-middle, 20%), 0.15)), to(rgba(lighten($gradient-primary-2, 20%), 0.15))) !important;
+        background: linear-gradient($gradient-direction, rgba(lighten($gradient-primary-1, 20%), 0.15), rgba(lighten($gradient-primary-middle, 20%), 0.15), rgba(lighten($gradient-primary-2, 20%), 0.15)) !important;
+    } @else {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop(rgba(lighten($gradient-primary-1, 20%), 0.15)), to(rgba(lighten($gradient-primary-2, 20%), 0.15))) !important;
+        background: linear-gradient($gradient-direction, rgba(lighten($gradient-primary-1, 20%), 0.15), rgba(lighten($gradient-primary-2, 20%), 0.15)) !important;
+    }
+}
+
+@each $color, $value in $opacity-values {
+  .pix-#{$color} {
+      opacity: $value !important;
+  }
+  .pix-hover-#{$color}:hover {
+      opacity: $value !important;
+  }
+}
+
+// @if $enable-gradients {
+//   @each $color, $value in $theme-colors {
+//     @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+//   }
+// }
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}

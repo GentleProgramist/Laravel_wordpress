@@ -1,0 +1,27 @@
+/*
+ * Theme Name: essentials
+ *
+ * Layout: Sidebar-Content
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+
+.site-content .widget-area {
+	float: left;
+	overflow: hidden;
+	width: 25%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+.no-sidebar .content-area {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.no-sidebar .site-main {
+	margin-right: 0;
+}

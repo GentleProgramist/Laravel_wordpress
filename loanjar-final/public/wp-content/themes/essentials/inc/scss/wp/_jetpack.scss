@@ -1,0 +1,34 @@
+/**
+ * Jetpack
+ */
+#infinite-handle {
+    text-align: center;
+    padding-top: 60px;
+    span {
+        display: inline-block;
+        font-weight: $btn-font-weight;
+        color: $body-color;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        background-color: transparent;
+        border: $btn-border-width solid transparent;
+        margin-right: 10px;
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+        @include transition($btn-transition);
+
+        @include hover {
+          color: $body-color;
+          text-decoration: none;
+        }
+        @extend .btn-white;
+        box-shadow: $box-shadow-sm !important;
+        @extend .text-sm;
+        @include fly-sm();
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+        font-weight: $font-weight-bold;
+    }
+}

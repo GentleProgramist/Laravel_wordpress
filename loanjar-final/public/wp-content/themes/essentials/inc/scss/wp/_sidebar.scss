@@ -1,0 +1,13 @@
+/**
+ * Sticky sidebar
+ */
+.pix-sticky-sidebar {
+    top: 120px;
+}
+.pix-sidebar-adjust {
+    z-index: 999999;
+    &.sticky-bottom {
+        top: inherit !important;
+        align-self: flex-end;
+    }
+}

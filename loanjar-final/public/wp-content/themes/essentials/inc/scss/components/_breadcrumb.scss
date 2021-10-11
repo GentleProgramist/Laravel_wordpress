@@ -1,0 +1,30 @@
+.breadcrumb {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  margin-bottom: $breadcrumb-margin-bottom;
+  list-style: none;
+  background-color: transparent;
+  font-weight: $font-weight-bold;
+  @include border-radius($breadcrumb-border-radius);
+  &.pix-bg {
+    background-color: $breadcrumb-bg;
+  }
+  &.pix-shadow {
+      background-color: #fff;
+      @include pix-box-shadow('sm', $breadcrumb-border-radius);
+  }
+}
+.breadcrumb-item {
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding;
+    &::before {
+      display: none;
+    }
+  }
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
+}

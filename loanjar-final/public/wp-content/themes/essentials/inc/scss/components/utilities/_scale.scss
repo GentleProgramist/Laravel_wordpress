@@ -1,0 +1,73 @@
+.scale-sm,
+.scale,
+.scale-lg,
+.scale-inverse-sm,
+.scale-inverse,
+.scale-inverse-lg {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: $box-scale-transition;
+    transition: $box-scale-transition;
+    * {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+}
+
+
+.scale-sm {
+    &:hover {
+        -webkit-transform: $box-scale-sm !important;
+                transform: $box-scale-sm !important;
+        z-index: 999;
+    }
+}
+.scale {
+    &:hover {
+        -webkit-transform: $box-scale !important;
+                transform: $box-scale !important;
+        z-index: 999;
+    }
+}
+.scale-lg {
+    &:hover {
+        -webkit-transform: $box-scale-lg !important;
+                transform: $box-scale-lg !important;
+        z-index: 999;
+    }
+}
+
+.scaled-sm {
+    -webkit-transform: $box-scale-sm !important;
+            transform: $box-scale-sm !important;
+    z-index: 999;
+}
+.scaled {
+    -webkit-transform: $box-scale !important;
+            transform: $box-scale !important;
+    z-index: 999;
+}
+.scaled-lg {
+    -webkit-transform: $box-scale-lg !important;
+            transform: $box-scale-lg !important;
+    z-index: 999;
+}
+
+.scale-inverse-sm {
+    &:hover {
+        -webkit-transform: $box-scale-hover-sm !important;
+                transform: $box-scale-hover-sm !important;
+    }
+}
+.scale-inverse {
+    &:hover {
+        -webkit-transform: $box-scale-hover !important;
+                transform: $box-scale-hover !important;
+    }
+}
+.scale-inverse-lg {
+    &:hover {
+        -webkit-transform: $box-scale-hover-lg !important;
+                transform: $box-scale-hover-lg !important;
+    }
+}

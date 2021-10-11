@@ -1,0 +1,225 @@
+.btn-blink-gradient-primary {
+    color: $gradient-primary-1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @if $middle-gradient == 'yes' {
+        @include button-gradient-blink-variant(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) fixed, #fff);
+    } @else {
+        @include button-gradient-blink-variant(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) fixed, #fff);
+    }
+}
+.btn-underline-gradient-primary {
+    @include button-gradient-underline-variant($gradient-primary-1);
+}
+.btn-line-gradient-primary {
+    @include button-gradient-line-variant($gradient-primary-1);
+}
+
+.firas {
+    content: $middle-gradient;
+}
+.text-gradient-primary {
+    background-color: $primary;
+    // text-rendering:optimizelegibility;
+    @if $middle-gradient == 'yes' {
+        // background: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2)) fixed;
+        background-image: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+        background-image: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+    } @else {
+        background-image: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+        background-image: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+    }
+     background-size: 100%;
+    -webkit-box-decoration-break: clone;
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    box-decoration-break: clone;
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-repeat: repeat;
+    svg {
+        path, rect, circle, polygon {
+            fill:url(#svg-gradient-primary) !important;
+        }
+   }
+   i { position: inherit !important; }
+   .pix-words-wrapper span {
+       background-size: 100%;
+      -webkit-box-decoration-break: clone;
+      -webkit-background-clip: text !important;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      box-decoration-break: clone;
+      background-attachment: fixed;
+      background-position: 0 0;
+      background-repeat: repeat;
+       @if $middle-gradient == 'yes' {
+           // background: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2)) fixed;
+           background-image: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2)) !important;
+           background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+           background-image: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+       } @else {
+           background-image: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2)) !important;
+           background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+           background-image: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+       }
+   }
+}
+@-moz-document url-prefix() {
+ .text-gradient-primary, .text-gradient-primary * {
+     background-attachment: inherit !important;
+  }
+}
+.text-gradient-primary-test {
+    background-color: $primary;
+    @if $middle-gradient == 'yes' {
+        // background: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2)) fixed;
+        background-image: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+        background-image: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+    } @else {
+        background-image: -webkit-gradient(linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+        background-image: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+    }
+     background-size: 100%;
+    -webkit-box-decoration-break: clone;
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    box-decoration-break: clone;
+    background-attachment: scroll;
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.text-attachment-fix {
+    background-attachment: local !important;
+}
+
+.bg-gradient-primary {
+    @if $middle-gradient == 'yes' {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+    } @else {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+    }
+    @if not variable-exists(disable-fixed-gradient) {
+        background-attachment: fixed !important;
+    }
+    background-repeat: repeat-y;
+    &.pix-bg-attachment-scroll {
+        background-attachment: scroll !important;
+    }
+}
+.bg-gradient-primary-hover {
+    -webkit-transition: $transition-base;
+    transition: $transition-base;
+    &:hover{
+        @if $middle-gradient == 'yes' {
+            background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+            background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+        } @else {
+            background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+            background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+        }
+        @if not variable-exists(disable-fixed-gradient) {
+            background-attachment: fixed !important;
+        }
+    }
+}
+.pix-bg-attachment-scroll {
+    background-attachment: scroll !important;
+}
+.bg-gradient-primary-hover:hover {
+    -webkit-transition: $transition-base;
+    transition: $transition-base;
+    @if $middle-gradient == 'yes' {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) fixed !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) fixed !important;
+    } @else {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) fixed !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) fixed !important;
+    }
+}
+.btn-gradient-primary {
+    -webkit-transition: $transition-base;
+    transition: $transition-base;
+    @if $middle-gradient == 'yes' {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+    } @else {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+    }
+    &:hover {
+        // @if $middle-gradient {
+        //     background: linear-gradient($gradient-direction, rgba($gradient-primary-1, 0.8), rgba($gradient-primary-middle, 0.8), rgba($gradient-primary-2, 0.8)) !important;
+        // } @else {
+        //     background: linear-gradient($gradient-direction, rgba($gradient-primary-1, 0.8), rgba($gradient-primary-2, 0.8)) !important;
+        // }
+        opacity: 0.7;
+    }
+}
+
+.bg-gradient-primary-cover {
+    @if $middle-gradient == 'yes' {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), color-stop($gradient-primary-middle), to($gradient-primary-2)) !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-middle, $gradient-primary-2) !important;
+    } @else {
+        background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop($gradient-primary-1), to($gradient-primary-2)) !important;
+        background: linear-gradient($gradient-direction, $gradient-primary-1, $gradient-primary-2) !important;
+    }
+}
+
+// .text-gradient-secondary{
+//     background: linear-gradient($gradient-direction, $gradient-secondary-1, $gradient-secondary-2) fixed;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+//
+// .bg-gradient-secondary {
+//     background: linear-gradient($gradient-direction, $gradient-secondary-1, $gradient-secondary-2);
+// }
+
+
+::-moz-selection {
+  background: $primary; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+
+
+::selection {
+  background: $primary; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+::-moz-selection {
+  background: $primary; /* Gecko Browsers */
+  color: #fff;
+}
+
+.bg-gradient-dark {
+    background: -webkit-gradient(linear, left top, left bottom, from($gradient-direction), color-stop(#111), to(#333)) !important;
+    background: linear-gradient($gradient-direction, #111, #333) !important;
+    @if not variable-exists(disable-fixed-gradient) {
+        background-attachment: fixed !important;
+    }
+}
+
+.bg-dark-blur {
+    background: rgba(29,29,31,0.72) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+}
+.bg-light-blur {
+    background: rgba(255,255,255,0.8) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+}

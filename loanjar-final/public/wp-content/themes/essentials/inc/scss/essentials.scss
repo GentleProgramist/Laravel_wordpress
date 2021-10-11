@@ -1,0 +1,80 @@
+/*
+*   PixFort
+*   Essentials
+*   31/10/2020
+*/
+
+// @import "bootstrap/bootstrap";
+// @import "bootstrap";
+@import "components/variables-layout-company";
+@import "components/functions";
+@import "components/variables";
+@import "components/mixins";
+
+@import "components/utilities/spacing";
+@import "components/utilities/background";
+@import "components/utilities/text";
+@import "components/utilities/borders";
+@import "components/utilities/shadows";
+@import "components/utilities/scale";
+@import "components/utilities/fly";
+
+@import "components/type";
+@import "components/badge";
+@import "components/forms";
+@import "components/alert";
+@import "components/breadcrumb";
+@import "components/input-group";
+@import "components/card";
+@import "components/dropdown";
+@import "components/color";
+@import "components/navbar";
+
+@import "components/buttons";
+@import "components/reboot";
+@import "components/nav";
+@import "components/transitions";
+@import "components/tooltip";
+
+@import "hamburgers/hamburgers";
+
+@import "elements/keyframes";
+@import "elements/chart";
+@import "elements/fancy_box";
+@import "elements/animations";
+@import "elements/text_animations";
+@import "elements/clients";
+@import "elements/carousel";
+@import "elements/to-top";
+@import "elements/search";
+@import "elements/dividers";
+@import "elements/megamenu";
+@import "elements/intro";
+@import "elements/overlay";
+@import "elements/headers";
+@import "elements/sidebar";
+@import "elements/story";
+@import "elements/video";
+@import "elements/circles";
+@import "elements/dark";
+@import "elements/masonry";
+
+@if variable-exists(enable_google_maps) {
+    @import "elements/map";
+}
+@import "elements/levels";
+
+@import "wp/widgets";
+@import "wp/fixes";
+@import "wp/sidebar";
+@import "wp/elements";
+@if variable-exists(enable_woocommerce) {
+    @import "wp/woocommerce";
+}
+@if variable-exists(enable_jetpack) {
+    @import "wp/jetpack";
+}
+@if variable-exists(enable_cf7) {
+    @import "wp/cf7";
+}
+@import "wp/main";

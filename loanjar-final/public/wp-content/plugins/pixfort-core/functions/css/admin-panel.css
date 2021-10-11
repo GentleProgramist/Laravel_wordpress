@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
+
+body * {
+    /* background: #333 !important; */
+}
+#wpbody-content {
+    /* background: #333 !important; */
+}
+
+.redux-container.pixfort_options_container {
+    border: 0px !important;
+    font-family: 'Roboto', sans-serif !important;
+    background: #F3F3F6 !important;
+    border-radius: 5px !important;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15) !important;
+
+}
+#redux-header {
+    border: 0px !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #23232A !important;
+    background: #23232A url('./admin/top-bar.svg') no-repeat top left!important;
+}
+
+
+
+
+#redux-form-wrapper {
+    /* background: #2a2a2a; */
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+
+#redux_save {
+
+}
+
+.redux-main {
+    background: #fff !important;
+}
+/* Remove elements */
+.redux-dev-mode-notice-container, .rAds  {
+    display: none !important;
+    opacity: 0 !important;
+    z-index: -100 !important;
+}
+
+
+
+.pix-opts-dividers li.redux-image-select {
+    width: 100px;
+    display: inline-block;
+    padding: 5px !important;
+    padding-bottom: : 0px !important;
+}
+.pix-opts-dividers .redux-image-select img {
+    background: #666;
+    width: 100px;
+}
+
+
+.redux-group-tab-link-li {
+    padding: 10px !important;
+    display: inline-block !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+.redux-group-tab-link-a {
+    /* border: 1px solid #E1E1E6 !important; */
+    border-radius: 5px !important;
+    background: transparent !important;
+    color: rgba(35,35,42,0.3) !important;
+    text-shadow: none !important;
+}
+.redux-group-menu > .redux-group-tab-link-li > .redux-group-tab-link-a {
+    border: 1px solid #E1E1E6 !important;
+
+}
+.redux-group-tab-link-li.activeChild > .redux-group-tab-link-a {
+    background: #FFFFFF !important;
+    border-color: #E1E1E6 !important;
+    color: #23232A !important;
+}
+.redux-group-tab-link-li.activeChild > .redux-group-tab-link-a .el {
+    color: #50E3C2 !important;
+}
+.redux-group-menu > .redux-group-tab-link-li.active > .redux-group-tab-link-a {
+    background: #FFFFFF !important;
+    border-color: #E1E1E6 !important;
+    color: #23232A !important;
+}
+.redux-group-menu > .redux-group-tab-link-li.active > .redux-group-tab-link-a .el {
+    color: #50E3C2 !important;
+}
+
+.redux-group-tab-link-li .redux-group-tab-link-li.active {
+    padding: 4px 10px !important;
+    border-radius: 5px !important;
+    margin: 5px 0 !important;
+    background: rgba(35,35,42,0.05) !important;
+    color: #23232A !important;
+}
+.redux-group-tab-link-li .redux-group-tab-link-li.active a {
+    color: #23232A !important;
+    width: 100% !important;
+}
+.redux-group-tab-link-li.activeChild a, .redux-sidebar .redux-group-menu li.active a {
+    color: #23232A !important;
+    display: inline-block !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+.redux-group-tab-link-li.activeChild .redux-group-tab-link-li.active a:after {
+    display: none;
+}
+.redux-container .redux-sidebar .redux-group-menu,
+.redux-container .redux-sidebar .redux-group-menu li .subsection {
+    background-color: transparent !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a,
+.redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a:hover {
+    background-color: transparent !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+    background-color: #fff !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li a {
+    font-weight: bold !important;
+}
+.redux-sidebar .redux-group-tab-link-a i {
+    color: #aaa !important;
+}

@@ -1,0 +1,47 @@
+@if index($hamburger-types, slider-r) {
+  /*
+   * Slider Reverse
+   */
+  .hamburger--slider-r {
+    .hamburger-inner {
+      top: $hamburger-layer-height / 2;
+
+      &::before {
+        top: $hamburger-layer-height + $hamburger-layer-spacing;
+        -webkit-transition-property: opacity, -webkit-transform;
+        transition-property: opacity, -webkit-transform;
+        transition-property: transform, opacity;
+        transition-property: transform, opacity, -webkit-transform;
+        -webkit-transition-timing-function: ease;
+                transition-timing-function: ease;
+        -webkit-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+      }
+
+      &::after {
+        top: ($hamburger-layer-height * 2) + ($hamburger-layer-spacing * 2);
+      }
+    }
+
+    &.is-active {
+      .hamburger-inner {
+        $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
+        -webkit-transform: translate3d(0, $y-offset, 0) rotate(-45deg);
+
+                transform: translate3d(0, $y-offset, 0) rotate(-45deg);
+
+        &::before {
+          -webkit-transform: rotate(45deg) translate3d($hamburger-layer-width / 7, $hamburger-layer-spacing * -1, 0);
+                  transform: rotate(45deg) translate3d($hamburger-layer-width / 7, $hamburger-layer-spacing * -1, 0);
+          opacity: 0;
+        }
+
+        &::after {
+          -webkit-transform: translate3d(0, $y-offset * -2, 0) rotate(90deg);
+                  transform: translate3d(0, $y-offset * -2, 0) rotate(90deg);
+        }
+      }
+    }
+  }
+}

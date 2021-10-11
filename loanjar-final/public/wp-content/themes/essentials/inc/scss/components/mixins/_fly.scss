@@ -1,0 +1,24 @@
+@mixin fly() {
+    -webkit-transition: $transition-base;
+    transition: $transition-base;
+    &:hover {
+        -webkit-transform: $fly !important;
+                transform: $fly !important;
+    }
+}
+@mixin fly-sm() {
+    -webkit-transition: $transition-base;
+    transition: $transition-base;
+    &:hover {
+        -webkit-transform: $fly-sm !important;
+                transform: $fly-sm !important;
+    }
+}
+@mixin fly-lg() {
+    -webkit-transition: $transition-base;
+    transition: $transition-base;
+    &:hover {
+        -webkit-transform: $fly-lg !important;
+                transform: $fly-lg !important;
+    }
+}

@@ -1,0 +1,28 @@
+// Base class
+.tooltip {
+  position: absolute;
+  display: block;
+  word-wrap: break-word;
+  opacity: 0;
+  &.show {
+      opacity: $tooltip-opacity;
+      z-index: 999999999999;
+  }
+  .arrow {
+    display: none !important;
+    opacity:0;
+    border: 0px;
+
+    &::before {
+      display: none !important;
+      opacity:0;
+      border: 0px;
+    }
+  }
+}
+
+.tooltip-inner {
+  text-align: center;
+  background-color: rgba(0,0,0,0.9);
+  font-weight: $font-weight-bold;
+}

@@ -1,0 +1,10 @@
+// stylelint-disable property-blacklist
+@mixin transition($transition...) {
+    @if length($transition) == 0 {
+      -webkit-transition: $transition-base;
+      transition: $transition-base;
+    } @else {
+      -webkit-transition: $transition;
+      transition: $transition;
+    }
+}

@@ -1,0 +1,391 @@
+html {
+    @if variable-exists(font-family-base) {
+      font-family: '#{$font-family-base}', sans-serif !important;
+    }
+  line-height: 1.15; // 3
+  -webkit-text-size-adjust: 100%; // 4
+  overflow-x: hidden;
+  width: 100%;
+  // -webkit-transform: translate3d(0,0,0);
+
+}
+
+body {
+  margin: 0;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  // color: final-color("dark-opacit-1");
+  text-align: left; // 3
+  background-color: $body-bg;  // 2
+  width: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+.font-weight-bold {
+    font-weight: $font-weight-bold !important;
+}
+
+
+.navbar-light.navbar-nav.nav-link.text-body-default,
+.text-body-default {
+    color: $body-color !important;
+    svg path {
+        fill: $body-color !important;
+    }
+    &.btn {
+        &:hover {
+            color: darken($body-color, 20%);
+        }
+        &:focus,
+        &:active {
+            color: darken($body-color, 20%);
+        }
+
+    }
+}
+.svg-body-default {
+    color: $body-color;
+    svg, svg path {
+        fill: $body-color !important;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        svg, svg path {
+            fill: darken($body-color, 20%) !important;
+        }
+    }
+}
+a.navbar-light.navbar-nav.nav-link.text-body-default,
+a.text-body-default {
+    &:hover,
+    &:focus,
+    &:active {
+    color: darken($body-color, 20%) !important;
+  }
+}
+
+.navbar-light.navbar-nav.nav-link.text-heading-default,
+.text-heading-default {
+    color: $heading-color !important;
+    svg path {
+        fill: $heading-color !important;
+    }
+}
+.svg-heading-default {
+    color: $heading-color;
+    svg, svg path {
+        fill: $heading-color;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        svg, svg path {
+            fill: darken($heading-color, 20%);
+        }
+    }
+}
+
+a.navbar-light.navbar-nav.nav-link.text-heading-default,
+a.text-heading-default {
+    &:hover,
+    &:focus,
+    &:active {
+    color: darken($heading-color, 20%) !important;
+    svg, svg path {
+        fill: darken($heading-color, 20%) !important;
+    }
+  }
+}
+
+.bg-body-default {
+    background: $body-color;
+}
+.bg-heading-default {
+    background: $heading-color;
+}
+
+.pix-full-height {
+    min-height: 100vh;
+}
+
+.pix-fit-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.pix-fit-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+%heading {
+  line-height: $headings-line-height;
+  // color: $headings-color;
+}
+
+h1 {
+    //
+  @extend %heading;
+  // @include font-size($h1-font-size);
+  @if variable-exists(h1-line-height) {
+      line-height: $h1-line-height;
+  }
+  svg {
+      height: $h1-font-size;
+      width: auto;
+  }
+}
+
+h2 {
+  @extend %heading;
+  @if variable-exists(h2-line-height) {
+      line-height: $h2-line-height;
+  }
+  svg {
+      height: $h2-font-size ;
+      width: auto;
+  }
+}
+
+h3 {
+  @extend %heading;
+  @if variable-exists(h3-line-height) {
+      line-height: $h3-line-height;
+  }
+  svg {
+      height: $h3-font-size;
+      width: auto;
+  }
+}
+
+h4 {
+  @extend %heading;
+  @if variable-exists(h4-line-height) {
+      line-height: $h4-line-height;
+  }
+  svg {
+      height: $h4-font-size;
+      width: auto;
+  }
+}
+
+h5 {
+  @extend %heading;
+  @if variable-exists(h5-line-height) {
+      line-height: $h5-line-height;
+  }
+  svg {
+      height: $h5-font-size;
+      width: auto;
+  }
+}
+
+h6 {
+  @extend %heading;
+  @if variable-exists(h6-line-height) {
+      line-height: $h6-line-height;
+  }
+  svg {
+      height: $h6-font-size;
+      width: auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+
+  // &:not(.elementor-headline):not(.elementor-heading-title):not([class^="pixicon-"]):not([class*=" pixicon-"]):not(.body-font){
+        font-family: '#{$font-family-secondary}', sans-serif;
+        letter-spacing: $letter-spacing-secondary;
+  // }
+  &:not(.elementor-heading-title){
+      color: $heading-color;
+  }
+  svg path {
+      fill: $heading-color !important;
+  }
+}
+// .elementor-headline {
+//     font-family: inherit !important;
+// }
+
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+  color: $body-color;
+}
+.elementor-text-editor p,
+.elementor-widget-text-editor p,
+.elementor-widget-theme-post-content p {
+	color: inherit;
+}
+
+figcaption {
+    text-align: center !important;
+    &.wp-caption-text {
+        color: lighten($body-color, 15%);
+    }
+}
+
+.has-drop-cap:not(:focus):first-letter {
+    color: $heading-color;
+}
+
+.text-24 { font-size: 24px;line-height: 38px; }
+.text-20 { font-size: 20px;line-height: 32px; }
+.text-18 {
+    font-size: 18px;
+    line-height: 26px;
+    i {
+        position: relative;
+        top: 2px;
+    }
+}
+.text-small, .text-sm { font-size: 14px !important; }
+.text-extra-small, .text-xs { font-size: 12px; }
+
+.line-height-0 {
+    line-height: 0;
+}
+.line-height-1 {
+    line-height: 1rem;
+}
+.rounded-t-lg {
+    @include border-top-radius(.3rem);
+}
+.rounded-b-lg {
+    @include border-bottom-radius(.3rem);
+}
+
+
+.sticky-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
+.svg-20 svg {
+    height: 20px;
+    width: auto;
+}
+.svg-24 svg {
+    height: 24px;
+    width: auto;
+}
+
+// Text classes
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.truncate-150 {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.truncate-200 {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+@-webkit-keyframes pix-loading-rotate {
+     0% {
+       -webkit-transform: rotate(0);
+               transform: rotate(0); }
+     100% {
+       -webkit-transform: rotate(360deg);
+               transform: rotate(360deg); } }
+
+
+
+@keyframes pix-loading-rotate {
+     0% {
+       -webkit-transform: rotate(0);
+               transform: rotate(0); }
+     100% {
+       -webkit-transform: rotate(360deg);
+               transform: rotate(360deg); } }
+    .pix-loading-circ-path {
+      height: 48px !important;
+      width: 48px !important;
+      color: rgba($primary, 0.08);
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      display: inline-block !important;
+      border: 4px solid;
+      border-radius: 50% !important;
+      border-right-color: rgba($primary, 0.2);
+      margin-top: -24px !important;
+      margin-left: -24px !important;
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+      -webkit-animation: pix-loading-rotate 1s ease-in-out infinite !important;
+              animation: pix-loading-rotate 1s ease-in-out infinite !important;
+      pointer-events: none;
+      z-index: 999999999999999999999;
+      box-sizing: border-box !important;
+      will-change: transform;
+   }
+   body.render .pix-loading-circ-path {
+       opacity: 0;
+   }
+
+
+@if variable-exists(custom-container) {
+    @media (min-width: 1200px) {
+        .container {
+            max-width: $custom-container !important;
+        }
+        // .elementor-section.elementor-section-boxed > .elementor-container {
+        //     max-width: $custom-container !important;
+        // }
+    }
+}
+
+
+.pix-el-full-width {
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+}
+.vc_section.vc_section_visible {
+    position: relative;
+}
+
+.vc_section.vc_section-has-fill[data-vc-full-width="true"] {
+    > .pix-divider, > .pix_element_overlay {
+        width: 100vw !important;
+        left: 50% !important;
+        margin-left: -50vw !important;
+    }
+}

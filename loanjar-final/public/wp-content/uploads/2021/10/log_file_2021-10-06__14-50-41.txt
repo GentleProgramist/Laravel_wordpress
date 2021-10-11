@@ -1,0 +1,27 @@
+
+---Downloaded files---
+The import files for: Landing Elementor were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = http://loan-jar.com
+Data file = /home/forge/loan-jar.com/public/wp-content/uploads/2021/10/demo-content-import-file_2021-10-06__14-50-41.xml
+Widget file = /home/forge/loan-jar.com/public/wp-content/uploads/2021/10/demo-widgets-import-file_2021-10-06__14-50-41.json
+Customizer file = not defined!
+Redux files:
+pix_options -> /home/forge/loan-jar.com/public/wp-content/themes/essentials/inc/demo-content/sites/landing/landing-elementor-options.json 
+
+
+---Importing widgets---
+Main Sidebar : 
+
+PixFort Search - Search - Imported
+PixFort Promo Box - Call to action - Imported
+Tag Cloud - No Title - Imported
+PixFort Recent Posts - Recent Posts - Imported
+PixFort Categories - Categories - Imported
+PixFort Social Links - Social Links - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: pix_options finished successfully!
